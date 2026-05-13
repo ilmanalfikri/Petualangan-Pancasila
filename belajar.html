@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar - Petualangan Pancasila</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Khusus Layout LMS */
+        .lms-container {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            min-height: 100vh;
+            margin-top: 65px;
+        }
+
+        /* Sidebar Navigasi */
+        .sidebar {
+            background: var(--bg-card);
+            border-right: 1px solid #ddd;
+            padding: 25px;
+            overflow-y: auto;
+            height: calc(100vh - 65px);
+            position: sticky;
+            top: 65px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .nav-lms { list-style: none; padding: 0; }
+        
+        .nav-lms li { margin-bottom: 10px; }
+
+        .nav-lms a { 
+            text-decoration: none; 
+            color: var(--text-sec); 
+            display: block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: var(--bg-main);
+            transition: 0.3s;
+        }
+
+        .nav-lms a:hover, .nav-lms a.active {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        /* Content Area Styling */
+        .content-area {
+            padding: 50px;
+            background: white;
+        }
+
+        .materi-section {
+            display: none; /* Sembunyikan semua section secara default */
+            max-width: 850px;
+            margin: 0 auto;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .materi-section.active {
+            display: block; /* Tampilkan hanya yang aktif */
+        }
+
+        .materi-header h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .materi-body p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Video Embed Styling */
+        .video-container-embed {
+            position: relative;
+            padding-bottom: 56.25%; /* Rasio 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .video-container-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .lms-container { grid-template-columns: 1fr; }
+            .sidebar { 
+                height: auto; 
+                position: relative; 
+                top: 0; 
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+            .content-area { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">← Beranda</a>
+            <div style="font-weight: bold; color: var(--text-sec);">LMS Petualangan Pancasila</div>
+        </div>
+    </nav>
+
+    <div class="lms-container">
+        <aside class="sidebar">
+            <h3>Daftar Materi</h3>
+            <ul class="nav-lms">
+                <li><a href="#pengenalan" class="active">Apa Itu Pancasila?</a></li>
+                <li><a href="#sejarah">Sejarah Pancasila</a></li>
+                <li><a href="#bab1">Bab 1: Ketuhanan</a></li>
+                <li><a href="#bab2">Bab 2: Kemanusiaan</a></li>
+                <li><a href="#bab3">Bab 3: Persatuan</a></li>
+                <li><a href="#bab4">Bab 4: Kerakyatan</a></li>
+                <li><a href="#bab5">Bab 5: Keadilan</a></li>
+                <li><a href="#siswa-pancasila">Menjadi Siswa Pancasila</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            
+            <section id="pengenalan" class="materi-section active">
+                <div class="materi-header">
+                    <h2>Apa Itu Pancasila?</h2>
+                </div>
+                <div class="materi-body">
+                    <p>Pancasila adalah dasar negara Indonesia[cite: 1]. Pancasila menjadi pedoman hidup bagi seluruh rakyat Indonesia[cite: 1]. Kita harus mengikuti nilai-nilai Pancasila dalam kehidupan sehari-hari agar hidup rukun, damai, dan saling menghormati[cite: 1].</p>
+                    <div class="info-box">
+                        <strong>Arti Kata Pancasila:</strong> Berasal dari bahasa Sanskerta[cite: 1]. "Panca" berarti lima, dan "Sila" berarti dasar atau aturan[cite: 1]. Jadi, Pancasila artinya lima dasar yang menjadi pedoman hidup bangsa Indonesia[cite: 1].
+                    </div>
+                </div>
+            </section>
+
+            <section id="sejarah" class="materi-section">
+                <div class="materi-header">
+                    <h2>Sejarah Pancasila</h2>
+                </div>
+                <div class="materi-body">
+                    <p>Pancasila lahir sebagai dasar negara untuk mempersatukan seluruh rakyat Indonesia[cite: 1]. Pancasila menjadi pedoman agar bangsa Indonesia tetap kuat dan tidak mudah terpecah belah[cite: 1].</p>
+                    <p>Nilai-nilai ini mengajarkan kita untuk rajin beribadah, menghormati orang lain, menjaga persatuan, suka bermusyawarah, dan bersikap adil[cite: 1].</p>
+                </div>
+            </section>
+
+            <section id="bab1" class="materi-section">
+                <div class="materi-header">
+                    <h2>Bab 1: Menemukan Cahaya Ketuhanan</h2>
+                </div>
+                <div class="materi-body">
+                    <p>Perjalanan dimulai dengan menyadari bahwa bangsa Indonesia adalah bangsa yang religius[cite: 1]. Sila Ketuhanan Yang Maha Esa menjadi fondasi paling dasar yang mengingatkan bahwa setiap manusia memiliki tanggung jawab moral kepada Sang Pencipta[cite: 1].</p>
+                    
+                    <div class="video-container-embed">
+                        <iframe src="https://www.youtube.com/embed/w9-bmw3tkko" allowfullscreen></iframe>
+                    </div>
+
+                    <p>Dalam kehidupan sehari-hari, hal ini bukan hanya tentang seberapa rajin seseorang beribadah, tetapi bagaimana keimanan tersebut terpancar dalam perilaku yang jujur, penuh kasih, dan menghargai perbedaan[cite: 1]. Kita diajak untuk melihat keberagaman agama bukan sebagai pemisah, melainkan sebagai taman bunga yang warna-warnanya saling melengkapi[cite: 1].</p>
+                </div>
+            </section>
+
+            <section id="bab2" class="materi-section">
+                <div class="materi-header">
+                    <h2>Bab 2: Menjunjung Tinggi Martabat Kemanusiaan</h2>
+                </div>
+                <div class="materi-body">
+                    <p>Setelah memahami hubungan dengan Tuhan, kita melangkah pada cara memperlakukan sesama melalui sila Kemanusiaan yang Adil dan Beradab[cite: 1]. Bab ini menekankan bahwa setiap orang, tanpa memandang latar belakangnya, memiliki hak dan martabat yang sama[cite: 1].</p>
+
+                    <div class="video-container-embed">
+                        <iframe src="https://www.youtube.com/embed/EymNF7gJywA" allowfullscreen></iframe>
+                    </div>
+
+                    <p>Kita belajar untuk mengasah empati, menempatkan diri pada posisi orang lain, dan berani membela kebenaran di tengah ketidakadilan[cite: 1]. Kemanusiaan yang beradab berarti kita bertindak dengan sopan santun dan etika, menjauhi perilaku perundungan (bullying), serta memiliki keinginan tulus untuk menolong mereka yang kesusahan[cite: 1].</p>
+                </div>
+            </section>
+
+            <section id="bab3" class="materi-section">
+                <div class="materi-header">
+                    <h2>Bab 3: Merajut Simpul Persatuan</h2>
+                </div>
+                <div class="materi-body">
+                    <p>Memasuki bab ketiga, kita belajar tentang pentingnya menjaga keutuhan rumah besar bernama Indonesia melalui sila Persatuan Indonesia[cite: 1]. Di tengah ribuan pulau dan ratusan bahasa, persatuan adalah pengikat yang memastikan kita tidak terpecah belah oleh ego kelompok atau golongan[cite: 1].</p>
+
+                    <div class="video-container-embed">
+                        <iframe src="https://www.youtube.com/embed/lxnT3p7Zwgo" allowfullscreen></iframe>
+                    </div>
+
+                    <p>Materi ini mengajarkan bahwa menjadi Indonesia berarti mencintai tanah air dengan cara menghargai identitas budaya setiap daerah sebagai kekayaan bersama[cite: 1]. Semangat gotong royong menjadi kunci utama agar ikatan persaudaraan kita tetap kokoh meski badai perbedaan pendapat menerjang[cite: 1].</p>
+                </div>
+            </section>
+
+            <section id="bab4" class="materi-section">
+                <div class="materi-header">
+                    <h2>Bab 4: Menghidupkan Tradisi Musyawarah</h2>
+                </div>
+                <div class="materi-body">
+                    <p>Langkah selanjutnya membawa kita pada cara mengambil keputusan bersama melalui sila Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan[cite: 1].</p>
+                    <p>Bab ini mengajarkan bahwa suara setiap orang itu berharga[cite: 1]. Alih-alih memaksakan kehendak atau menang-menangan sendiri, kita diajak untuk duduk bersama, mendengarkan dengan kepala dingin, dan mencari solusi terbaik melalui musyawarah[cite: 1].</p>
+                </div>
+            </section>
+
+            <section id="bab5" class="materi-section">
+                <div class="materi-header">
+                    <h2>Bab 5: Mewujudkan Keseimbangan Keadilan</h2>
+                </div>
+                <div class="materi-body">
+                    <p>Perjalanan berakhir pada muara dari semua nilai Pancasila, yaitu Sila Keadilan Sosial bagi Seluruh Rakyat Indonesia[cite: 1]. Bab ini menjelaskan bahwa kesejahteraan tidak boleh dinikmati oleh segelintir orang saja, melainkan harus dirasakan secara merata dari kota hingga ke pelosok desa[cite: 1].</p>
+                    <p>Di sini, kita diajak untuk memastikan bahwa setiap warga negara mendapatkan kesempatan yang sama dalam pendidikan, kesehatan, dan penghidupan yang layak[cite: 1].</p>
+                </div>
+            </section>
+
+            <section id="siswa-pancasila" class="materi-section">
+                <div class="materi-header">
+                    <h2>Menjadi Siswa Pancasila</h2>
+                </div>
+                <div class="materi-body">
+                    <p>Bagaimana cara kita menjadi siswa Pancasila dalam kehidupan sehari-hari? Berikut adalah contohnya[cite: 1]:</p>
+                    <ul style="margin-left: 20px; font-size: 1.1rem;">
+                        <li style="margin-bottom: 10px;"><strong>Sila 1:</strong> Berdoa sebelum belajar dan menghormati teman yang berbeda agama[cite: 1].</li>
+                        <li style="margin-bottom: 10px;"><strong>Sila 2:</strong> Membantu teman yang jatuh dan tidak melakukan bullying[cite: 1].</li>
+                        <li style="margin-bottom: 10px;"><strong>Sila 3:</strong> Menjaga kerukunan dan bangga menggunakan produk dalam negeri[cite: 1].</li>
+                        <li style="margin-bottom: 10px;"><strong>Sila 4:</strong> Berdiskusi dengan tertib saat kerja kelompok[cite: 1].</li>
+                        <li style="margin-bottom: 10px;"><strong>Sila 5:</strong> Berlaku adil dan rajin menabung[cite: 1].</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.nav-lms a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 1. Update Class Navigasi
+                document.querySelectorAll('.nav-lms a').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                // 2. Tampilkan Konten yang Sesuai
+                const targetId = this.getAttribute('href').substring(1);
+                document.querySelectorAll('.materi-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(targetId).classList.add('active');
+                
+                // 3. Scroll ke atas (untuk mobile)
+                if (window.innerWidth <= 768) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
